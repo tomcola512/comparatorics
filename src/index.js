@@ -8,8 +8,8 @@ const chain = comparators => (a, b) => {
 	return 0;
 };
 
-const pathed = (comparator, path) => (a, b) =>
-	comparator(delve(a, path), delve(b, path));
+const pathed = (comparator, ...keyOids) => (a, b) =>
+	comparator(delve(a, ...keyOids), delve(b, ...keyOids));
 
 const delve = (obj, ...keyOids) => {
 	let key;
