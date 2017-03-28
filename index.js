@@ -36,7 +36,7 @@ const reverse = (comparator, asc) =>
 	(a, b) =>
 		asc ? -comparator(a, b) : comparator(a, b);
 
-export default {
+const exports = {
 	chain,
     pathed,
 	reverse,
@@ -44,3 +44,5 @@ export default {
         delve
     }
 };
+
+export default exports;
